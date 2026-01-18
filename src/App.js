@@ -1,5 +1,4 @@
 
-
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CartaCafeteria from './componentes/primeraVentana/PrimeraVentana';
 import VentanaVentas from './componentes/segundaVentana/SegundaVentana';

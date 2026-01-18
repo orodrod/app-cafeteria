@@ -1,0 +1,9 @@
+.contenedor-principal {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-principal);
+  margin: 0;
+  padding: 0;
+}

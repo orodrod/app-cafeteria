@@ -1,0 +1,108 @@
+/*======= Propiedades de los botones inferiores ==========*/
+.boton-ventas-globales {
+  width: 100%;
+  padding: 16px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px; /* Separación del botón de arriba */
+ 
+}
+
+.boton-ventas-globales:hover {
+  background-color: #333333;
+}
+
+.boton-finalizar{
+  width: 100%;
+  padding: 16px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.boton-finalizar:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+/* =========== Propiedades del panel de pedidos =============*/
+
+.seleccion {
+  width: 380px;
+  min-width: 380px;
+  height: 100vh;
+  background-color: var(--color-componente);
+  color: var(--color-texto);
+  border-left: 1px solid var(--color-borde);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.titulo-lateral {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-texto); 
+}
+
+.lista-seleccion {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.item-seleccionado {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.nombre-producto {
+    color: var(--color-texto);
+    margin-left: 10px; 
+}
+
+.footer-lateral {
+  border-top: 2px solid var(--color-borde); 
+  padding-top: 15px;
+  margin-top: auto;
+}
+
+.desglose-precio {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--color-texto); 
+  opacity: 0.8; 
+  margin-bottom: 5px;
+}
+
+.total-compra {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-texto); 
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--color-borde); 
+}
+
+.mensaje-vacio {
+  text-align: center;
+  color: var(--color-texto);
+  opacity: 0.5;
+  margin-top: 50px;
+}

@@ -1,0 +1,125 @@
+/* --- Contenedor Principal --- */
+.contenedor-tabla {
+    /* Dimensiones */
+    
+    height: 65vh;
+    min-width: 300px; /* Corregido: Usar px es más seguro que vh para ancho */
+    
+    
+    /* Posicionamiento */
+    padding: 24px 24px 0 24px; /* Padding ajustado */
+    
+    /* Estilos Visuales */
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    font-family: 'Arial', sans-serif;
+    
+    /* Comportamiento */
+    overflow-y: auto; /* Activa el scroll vertical */
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.6s, color 0.6s;
+}
+
+/* --- Estructura General de la Tabla --- */
+.tabla-precios {
+    width: 100%;
+    border-collapse: separate; /* Necesario para bordes redondeados */
+    border-spacing: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 46px;
+    
+    /* Corrección: Es 'border', no 'border-color' */
+    border: 1px solid var(--color-borde); 
+    border-radius: 10px; /* Redondea el contenedor */
+}
+
+/* --- Cabecera (TH) --- */
+.cabecera-tabla th {
+    padding: 12px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--color-texto); 
+    text-align: left;
+    
+    /* Sticky Header: Fija la cabecera */
+    position: sticky;
+    top: 0;
+    background-color: #009879;
+    z-index: 10;
+    border: none;
+}
+
+/* Alineación del precio en la cabecera */
+.cabecera-tabla th:last-child {
+    text-align: right;
+}
+
+/* --- Cuerpo (TD) --- */
+.precios-productos td {
+    padding: 12px 15px;
+    color: var(--color-texto);
+    /* El borde va en el TD porque usamos 'separate' */
+    border-bottom: 1px solid var(--color-borde); 
+    transition: background-color 0.6s;
+}
+
+/* Alineación del precio en los datos */
+.precios-productos td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: #009879;
+}
+
+/* Efecto Hover */
+.precios-productos:hover td {
+    background-color: rgba(0, 0, 0, 0.05); /* Gris sutil */
+    cursor: default;
+}
+
+/* --- Bordes Redondeados (Esquinas) --- */
+
+/* 1. Esquina Superior Izquierda */
+.cabecera-tabla th:first-child {
+    border-top-left-radius: 10px;
+}
+
+/* 2. Esquina Superior Derecha */
+.cabecera-tabla th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* 3. Esquina Inferior Izquierda */
+.tabla-precios tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+/* 4. Esquina Inferior Derecha */
+.tabla-precios tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+/* 5. IMPORTANTE: Quitar la línea de la última fila */
+.tabla-precios tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* --- Estilos de la Scrollbar --- */
+.contenedor-tabla::-webkit-scrollbar {
+    width: 6px; /* Un poco más ancha para ser clicable */
+}
+
+.contenedor-tabla::-webkit-scrollbar-track {
+    background: transparent; /* O var(--color-principal) */
+}
+
+.contenedor-tabla::-webkit-scrollbar-thumb {
+    background: var(--color-borde);
+    border-radius: 4px;
+}
+
+.contenedor-tabla::-webkit-scrollbar-thumb:hover {
+    background: #009879; /* Color verde al pasar el mouse por la barra */
+}

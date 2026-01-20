@@ -103,7 +103,7 @@ const PanelPedido = ({ seleccionados, finalizar, agregar, quitar }) => {
 
         <button 
           className="boton-ventas-globales" 
-          onClick={() => navigate('/ventas')} 
+          onClick={() => navigate('/ventasGlobales')} 
         >
           Ver Ventas Globales
         </button>

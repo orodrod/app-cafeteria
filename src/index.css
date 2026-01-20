@@ -4,7 +4,7 @@
   --color-principal: #f8f9fa ;  
   --color-componente: #ffffff;  
   --color-texto: #000000;   
-  --color-borde: #dee2e6;     
+  --color-borde: #a4a8ac;     
 }
 /* TEMA OSCURO */
 [data-bs-theme="dark"] {

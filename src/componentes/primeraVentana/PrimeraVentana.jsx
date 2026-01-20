@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Grid from './Grid';
 import PanelPedido from './PanelPedido';
-import '../../css/primeraVentana.css'
+import '../../css/ventanas.css'
 
 const CartaCafeteria = () => {
     const [pedido, setPedido] = useState([]);

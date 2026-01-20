@@ -1,0 +1,89 @@
+/* --- Contenedor Principal --- */
+.contenedor {
+    flex: 1;
+    height: 100vh;
+    width: 50vw;
+    overflow-y: auto; /* Aquí está el scroll, esto está bien */
+    padding: 40px 40px 0px 50px;
+    background-color: var(--color-principal);
+    transition: background-color 0.6s;
+}
+
+/* --- Cabecera de la Página (H1) --- */
+.cabecera {
+    text-align: center;
+}
+
+.cabecera-titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--color-texto);
+}
+
+/* --- Estructura de la Tabla --- */
+.tabla-cantidad {
+    width: 100%;
+    border-collapse: separate; /* Necesario para bordes redondeados */
+    border-spacing: 0;         /* Pega las celdas entre sí */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Corrección: 'border' en lugar de 'border-color' */
+    border: 1px solid var(--color-borde); 
+    border-radius: 10px; /* Redondea el contenedor general */
+}
+
+/* --- Cabecera de la Tabla (TH) --- */
+.cabecera-tabla-cantidad th {
+    padding: 12px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--color-texto); /* Aseguramos que el texto se lea sobre el verde */
+    
+    /* Sticky Header */
+    position: sticky;
+    top: 0;
+    background-color: #009879;
+    z-index: 10;
+}
+
+/* --- Filas y Celdas (TD) --- */
+/* Corrección: El padding y el borde van en el TD, no en el TR (.filas) */
+.filas td {
+    padding: 12px 15px;
+    color: var(--color-texto);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.filas td:last-child {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* --- Corrección de Bordes Redondeados (Esquinas) --- */
+
+/* 1. Esquina Superior Izquierda */
+/* Corrección: Usamos la clase correcta .cabecera-tabla-cantidad */
+.cabecera-tabla-cantidad th:first-child {
+    border-top-left-radius: 10px;
+}
+
+/* 2. Esquina Superior Derecha */
+.cabecera-tabla-cantidad th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* 3. Esquina Inferior Izquierda */
+.tabla-cantidad tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+/* 4. Esquina Inferior Derecha */
+.tabla-cantidad tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+/* 5. Quitar la línea de abajo de la última fila para que no corte el redondeado */
+.tabla-cantidad tbody tr:last-child td {
+    border-bottom: none;
+}

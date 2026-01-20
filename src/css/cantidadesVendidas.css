@@ -5,7 +5,7 @@
     flex-direction: column;
     height: 85vh;
     width: 50vw;
-    padding: 60px 40px 20px 40px; 
+    padding: 56px 40px 20px 40px; 
     background-color: var(--color-principal);
     transition: background-color 0.6s;
     overflow: hidden;
@@ -39,6 +39,8 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--color-borde); 
     border-radius: 10px; /* Redondea el contenedor general */
+    background-color: var(--color-componente);
+    transition: background-color 0.6s;
 }
 
 /* --- Cabecera de la Tabla (TH) --- */
@@ -65,6 +67,7 @@
     padding: 12px 15px;
     color: var(--color-texto);
     border-bottom: 1px solid var(--color-borde);
+    width: inherit;
 }
 
 .filas td:last-child {

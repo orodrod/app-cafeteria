@@ -19,9 +19,4 @@ export const PRODUCTOS = [
   { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
   { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
   { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
 ];

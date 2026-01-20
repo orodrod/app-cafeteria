@@ -1,17 +1,21 @@
 /* --- Contenedor Principal --- */
 .contenedor {
+    display: flex;
     flex: 1;
-    height: 100vh;
+    flex-direction: column;
+    height: 85vh;
     width: 50vw;
-    overflow-y: auto; /* Aquí está el scroll, esto está bien */
-    padding: 40px 40px 0px 50px;
+    padding: 60px 40px 20px 40px; 
     background-color: var(--color-principal);
     transition: background-color 0.6s;
+    overflow: hidden;
 }
 
 /* --- Cabecera de la Página (H1) --- */
 .cabecera {
     text-align: center;
+    flex-shrink: 0; /*Para que no se aplaste cuando no hay espacio*/
+    position: relative;
 }
 
 .cabecera-titulo {
@@ -21,13 +25,18 @@
     color: var(--color-texto);
 }
 
+.tabla-wraper{
+    flex: 1;           
+    overflow-y: auto;  
+    padding: 0 24px 24px 24px; 
+}
+
 /* --- Estructura de la Tabla --- */
 .tabla-cantidad {
     width: 100%;
     border-collapse: separate; /* Necesario para bordes redondeados */
     border-spacing: 0;         /* Pega las celdas entre sí */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    /* Corrección: 'border' en lugar de 'border-color' */
     border: 1px solid var(--color-borde); 
     border-radius: 10px; /* Redondea el contenedor general */
 }
@@ -38,13 +47,16 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1rem;
-    color: var(--color-texto); /* Aseguramos que el texto se lea sobre el verde */
+    color: var(--color-texto); 
     
     /* Sticky Header */
     position: sticky;
     top: 0;
     background-color: #009879;
     z-index: 10;
+}
+.cabecera-tabla-cantidad th:last-child {
+    text-align: right;
 }
 
 /* --- Filas y Celdas (TD) --- */
@@ -58,6 +70,12 @@
 .filas td:last-child {
     text-align: right;
     font-weight: bold;
+}
+
+.filas:hover td {
+    background-color: var(--color-borde); 
+    cursor: default;
+    transition: background-color 0.4s;
 }
 
 /* --- Corrección de Bordes Redondeados (Esquinas) --- */
@@ -83,7 +101,20 @@
     border-bottom-right-radius: 10px;
 }
 
-/* 5. Quitar la línea de abajo de la última fila para que no corte el redondeado */
-.tabla-cantidad tbody tr:last-child td {
-    border-bottom: none;
+/*Estilo de scrollbar*/
+.tabla-wraper::-webkit-scrollbar {
+    width: 6px; /* Un poco más ancha para ser clicable */
+}
+
+.tabla-wraper::-webkit-scrollbar-track {
+    background: transparent; /* O var(--color-principal) */
+}
+
+.tabla-wraper::-webkit-scrollbar-thumb {
+    background: var(--color-borde);
+    border-radius: 4px;
+}
+
+.tabla-wraper::-webkit-scrollbar-thumb:hover {
+    background: #009879; /* Color verde al pasar el mouse por la barra */
 }

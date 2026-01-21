@@ -13,7 +13,9 @@ const PanelPedido = ({ seleccionados, finalizar, agregar, quitar }) => {
 
   const manejarFinalizar = () => {
     if (seleccionados.length === 0) return;
-    registrarNuevoPedido(seleccionados, subtotal, impuesto); // Guardamos en el contexto global
+    const impuestoNumero = Number(impuesto.toFixed(2));
+    const subtotalNumero = Number(subtotal.toFixed(2));
+    registrarNuevoPedido(seleccionados, subtotalNumero, impuestoNumero); // Guardamos en el contexto global
     finalizar(); // Ejecutamos la limpieza y el alert del padre
   };
 

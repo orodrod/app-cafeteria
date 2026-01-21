@@ -63,6 +63,7 @@
 
 /* --- Filas y Celdas (TD) --- */
 /* Corrección: El padding y el borde van en el TD, no en el TR (.filas) */
+
 .filas td {
     padding: 12px 15px;
     color: var(--color-texto);

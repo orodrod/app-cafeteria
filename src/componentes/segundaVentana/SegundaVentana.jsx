@@ -8,9 +8,7 @@ import '../../css/ventanas.css';
 
 const VentanaVentas = () => {
     //Definimos la funcion que importamos.
-    const {ventasGlobales} = useVentas();
-
-    console.log("Datos del contexto", ventasGlobales);
+    const {ventasGlobales, vaciarVentas} = useVentas();
 
     if (!ventasGlobales) {
         return <div>Cargando datos de ventas...</div>;
@@ -29,7 +27,7 @@ const VentanaVentas = () => {
             </div>
             <div className='contenedor-resultados'>
                 <TablaPrecios/>
-                <Resultados subtotal = {venta} impuestos = {totalImpuestos} total = {totalVentas}/>
+                <Resultados subtotal = {venta} impuestos = {totalImpuestos} total = {totalVentas} vaciarDatos = {vaciarVentas}/>
             </div>
         </div>
     )

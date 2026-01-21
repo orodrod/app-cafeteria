@@ -8,15 +8,4 @@ export const PRODUCTOS = [
   { id: "sandwich", nombre: "Sandwich", precio: 2.5, img: "/img/Sandwich.png"  },
   { id: "postre", nombre: "Postre", precio: 3, img: "/img/Postre.png"  },
   { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
-  { id: "papas", nombre: "Paquete de Papas", precio: 1, img: "/img/Paquete_Papas.png"  },
 ];

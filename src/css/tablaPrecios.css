@@ -5,14 +5,12 @@
     min-width: 300px; /* Corregido: Usar px es más seguro que vh para ancho */
     
     /* Posicionamiento */
-    padding: 40px 24px 24px 24px; /* Padding ajustado */
+    padding: 85px 24px 24px 24px; /* Padding ajustado */
     
     /* Estilos Visuales */
     /*background-color: var(--color-principal);*/
     font-family: 'Arial', sans-serif;
-    background-color: blue;
     /* Comportamiento */
-    overflow-y: auto; /* Activa el scroll vertical */
     display: flex;
     flex-direction: column;
     transition: background-color 0.6s;
@@ -23,7 +21,6 @@
     border-collapse: separate; /* Necesario para bordes redondeados */
     border-spacing: 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 46px;
     border: 1px solid var(--color-borde); 
     background-color: var(--color-componente);
     border-radius: 10px; /* Redondea el contenedor */
@@ -98,19 +95,25 @@
 }
 
 /* --- Estilos de la Scrollbar --- */
-.contenedor-tabla::-webkit-scrollbar {
+.envoltura::-webkit-scrollbar {
     width: 6px; /* Un poco más ancha para ser clicable */
 }
 
-.contenedor-tabla::-webkit-scrollbar-track {
+.envoltura::-webkit-scrollbar-track {
     background: transparent; /* O var(--color-principal) */
 }
 
-.contenedor-tabla::-webkit-scrollbar-thumb {
+.envoltura::-webkit-scrollbar-thumb {
     background: var(--color-borde);
     border-radius: 4px;
 }
 
-.contenedor-tabla::-webkit-scrollbar-thumb:hover {
+.envoltura::-webkit-scrollbar-thumb:hover {
     background: #009879; /* Color verde al pasar el mouse por la barra */
+}
+
+.envoltura{
+    flex: 1;           
+    overflow-y: auto; 
+    padding-right:20px;
 }

@@ -2,12 +2,14 @@ import React, { createContext, useState, useContext } from 'react';
 
 const Contexto = createContext();
 
+const estado_inicial = {
+  totalVentas: 0,
+  totalImpuestos: 0,
+  conteoProductos: {} 
+};
+
 export const VentasProvider = ({ children }) => {
-  const [ventasGlobales, setVentasGlobales] = useState({
-    totalVentas: 0,
-    totalImpuestos: 0,
-    conteoProductos: {} // Guardará { "id_producto": cantidad }
-  });
+  const [ventasGlobales, setVentasGlobales] = useState(estado_inicial);
 
   const registrarNuevoPedido = (productosDelPedido, subtotal, impuesto) => {
     setVentasGlobales(prev => {
@@ -26,8 +28,12 @@ export const VentasProvider = ({ children }) => {
     });
   };
 
+  const vaciarVentas = () => {
+    setVentasGlobales(estado_inicial);
+  };
+
   return (
-    <Contexto.Provider value={{ ventasGlobales, registrarNuevoPedido }}>
+    <Contexto.Provider value={{ ventasGlobales, registrarNuevoPedido, vaciarVentas }}>
       {children}
     </Contexto.Provider>
   );

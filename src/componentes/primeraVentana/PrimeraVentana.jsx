@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Grid from './Grid';
 import PanelPedido from './PanelPedido';
+import Swal from 'sweetalert2';
 import '../../css/ventanas.css'
 
 const CartaCafeteria = () => {
@@ -11,7 +12,14 @@ const CartaCafeteria = () => {
     };
 
     const finalizarVenta = () => {
-        alert("Venta registrada con éxito");
+        Swal.fire({
+            title: '¡Venta Registrada!',
+            text: 'El pedido se ha guardado correctamente.',
+            icon: 'success',
+            confirmButtonColor: '#198754', 
+            timer: 2000, // Se cierra sola en 2 segundos
+            timerProgressBar: true
+        });
         setPedido([]); // Limpia el panel después de vender
     };
 

@@ -1,26 +1,25 @@
-# Recomendaciones de inicio de la app 
+# Descripción de la Aplicación
+- En esta app se realizan pedidos en la vista principal, la cantidad de
+productos es sumatoria y se puede modificar con los botones +/-, una vez
+terminado el pedido haremos click en el botón finalizar, esto guarda las
+ventas y las suma para mostrarlas en la segunda vista, allí podremos
+limpiar la lista de ventas. Ambas vistas permiten navegar entre ellas sin
+perder la información, pero solo la segunda permite salir de la app con
+el botón salir. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# DESCARGAS NECESARIAS 
 
-## Available Scripts
+### `npm install`
+- Descarga las dependencias de react (node modules).
 
-In the project directory, you can run:
+### `npm install bootstrap`
+- Descargar esTilos de Bootstrap.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### DESCARGAS NECESARIAS 
-
-### `npm install Bootstrap`
-Descargar esilos de Bootstrap.
-
-### `npm install Bootsttrap-icons`
-Descargar iconnos de Bootstrap para los botones de claro/oscuro y de +/-.
+### `npm install bootsttrap-icons`
+- Descargar iconos de Bootstrap para los botones de claro/oscuro y de +/-.
 
 ### `npm install sweetalert2`
-Para el estilo del alert de venta realizada.
+- Para el estilo del alert de venta realizada.
+
+### `npm install react-router-dom`
+- Para la navegación entre las distintas vistas.

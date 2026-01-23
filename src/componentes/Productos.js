@@ -1,3 +1,5 @@
+
+/*Esta lista guarda todos los productos en venta, cualquier cambio aquí se refleja en la app. */
 export const PRODUCTOS = [
   { id: "agua", nombre: "Agua", precio: 1.5, img: "/img/Agua.png" },
   { id: "refresco", nombre: "Refresco", precio: 2, img: "/img/Refresco.png" },

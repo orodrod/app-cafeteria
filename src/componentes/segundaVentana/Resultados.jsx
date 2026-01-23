@@ -5,7 +5,9 @@ import '../../css/resultados.css'
 
 const Resultados = ({subtotal, impuestos, total, vaciarDatos}) => {
     const navigate = useNavigate();
+    /*Esta función se encarga de salir de la app, como esta se abre en el navegador, le he puesto salida al buscador google. */
     const salirApp = () => {
+        /*Primero intenta cerrar la ventana, si no lo consigue va a google. */
         window.close();
 
         if(!window.closed){
@@ -13,6 +15,7 @@ const Resultados = ({subtotal, impuestos, total, vaciarDatos}) => {
         }
     };
 
+    /*Pintamos la parte de los resultados y los botones, uno que vuelve a los pedidos, otro que limpia el contexto(se reinicia) y otro que sale de la app. */
     return (
         <div className='contenedor-res'>
             <div className='wraper'>

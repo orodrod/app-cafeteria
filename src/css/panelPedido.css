@@ -1,4 +1,6 @@
-/*======= Propiedades de los botones inferiores ==========*/
+
+
+/*--- Propiedades de los botones inferiores ---*/
 .boton-ventas-globales {
   width: 100%;
   padding: 16px;
@@ -9,7 +11,7 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 10px; /* Separación del botón de arriba */
+  margin-top: 10px; 
 }
 
 .boton-ventas-globales:hover {
@@ -35,7 +37,7 @@
   cursor: not-allowed;
 }
 
-/* =========== Propiedades del panel de pedidos =============*/
+/* --- Panel de pedidos --- */
 
 .seleccion {
   width: 380px;

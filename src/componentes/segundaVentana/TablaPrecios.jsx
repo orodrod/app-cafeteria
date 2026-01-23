@@ -2,6 +2,7 @@ import React from 'react';
 import {PRODUCTOS} from '../Productos';
 import '../../css/tablaPrecios.css'
 
+/*Pintamos los productos con sus precios en una tabla. */
 const TablaPrecios = () => {
 
     return (
@@ -15,6 +16,7 @@ const TablaPrecios = () => {
                         </tr>
                     </thead>
                     <tbody>
+                        {/*Se mapean todos los productos con su precio para montar la tabla. */}
                         {
                         PRODUCTOS.map((item) => {
                             return (<tr key={item.id} className='precios-productos'>

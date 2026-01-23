@@ -1,21 +1,16 @@
+
 /* --- Contenedor Principal --- */
 .contenedor-tabla {
-    /* Dimensiones */
     height: 65vh;
-    min-width: 300px; /* Corregido: Usar px es más seguro que vh para ancho */
-    
-    /* Posicionamiento */
-    padding: 85px 24px 24px 24px; /* Padding ajustado */
-    
-    /* Estilos Visuales */
-    /*background-color: var(--color-principal);*/
+    min-width: 300px; 
+    padding: 85px 24px 24px 24px; 
     font-family: 'Arial', sans-serif;
-    /* Comportamiento */
     display: flex;
     flex-direction: column;
     transition: background-color 0.6s;
 }
-/* --- Estructura General de la Tabla --- */
+
+/* --- Estructura de la Tabla --- */
 .tabla-precios {
     width: 100%;
     border-collapse: separate; /* Necesario para bordes redondeados */
@@ -23,7 +18,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--color-borde); 
     background-color: var(--color-componente);
-    border-radius: 10px; /* Redondea el contenedor */
+    border-radius: 10px; 
     transition: background-color 0.6s;
 }
 
@@ -36,7 +31,7 @@
     color: var(--color-texto); 
     text-align: left;
     
-    /* Sticky Header: Fija la cabecera */
+    /* Sticky fija la cabecera */
     position: sticky;
     top: 0;
     background-color: #009879;
@@ -53,7 +48,6 @@
 .precios-productos td {
     padding: 12px 15px;
     color: var(--color-texto);
-    /* El borde va en el TD porque usamos 'separate' */
     border-bottom: 1px solid var(--color-borde); 
     transition: background-color 0.6s;
 }
@@ -65,7 +59,6 @@
     color: #009879;
 }
 
-/* Efecto Hover */
 .precios-productos:hover td {
     background-color: var(--color-borde); 
     cursor: default;
@@ -74,33 +67,33 @@
 
 /* --- Bordes Redondeados (Esquinas) --- */
 
-/* 1. Esquina Superior Izquierda */
+/* Esquina Superior Izquierda */
 .cabecera-tabla th:first-child {
     border-top-left-radius: 10px;
 }
 
-/* 2. Esquina Superior Derecha */
+/* Esquina Superior Derecha */
 .cabecera-tabla th:last-child {
     border-top-right-radius: 10px;
 }
 
-/* 3. Esquina Inferior Izquierda */
+/* Esquina Inferior Izquierda */
 .tabla-precios tbody tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
 }
 
-/* 4. Esquina Inferior Derecha */
+/* Esquina Inferior Derecha */
 .tabla-precios tbody tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
 
 /* --- Estilos de la Scrollbar --- */
 .envoltura::-webkit-scrollbar {
-    width: 6px; /* Un poco más ancha para ser clicable */
+    width: 6px; 
 }
 
 .envoltura::-webkit-scrollbar-track {
-    background: transparent; /* O var(--color-principal) */
+    background: transparent; 
 }
 
 .envoltura::-webkit-scrollbar-thumb {
@@ -109,7 +102,7 @@
 }
 
 .envoltura::-webkit-scrollbar-thumb:hover {
-    background: #009879; /* Color verde al pasar el mouse por la barra */
+    background: #009879; 
 }
 
 .envoltura{

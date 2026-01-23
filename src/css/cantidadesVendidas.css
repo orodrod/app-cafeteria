@@ -1,3 +1,4 @@
+
 /* --- Contenedor Principal --- */
 .contenedor {
     display: flex;
@@ -51,7 +52,7 @@
     font-size: 1rem;
     color: var(--color-texto); 
     
-    /* Sticky Header */
+    /* Sticky fija la cabecera de la tabla.*/
     position: sticky;
     top: 0;
     background-color: #009879;
@@ -62,7 +63,6 @@
 }
 
 /* --- Filas y Celdas (TD) --- */
-/* Corrección: El padding y el borde van en el TD, no en el TR (.filas) */
 
 .filas td {
     padding: 12px 15px;
@@ -82,36 +82,37 @@
     transition: background-color 0.4s;
 }
 
-/* --- Corrección de Bordes Redondeados (Esquinas) --- */
 
-/* 1. Esquina Superior Izquierda */
-/* Corrección: Usamos la clase correcta .cabecera-tabla-cantidad */
+/* --- Bordes Redondeados (Esquinas) --- */
+
+/* Esquina Superior Izquierda */
+
 .cabecera-tabla-cantidad th:first-child {
     border-top-left-radius: 10px;
 }
 
-/* 2. Esquina Superior Derecha */
+/* Esquina Superior Derecha */
 .cabecera-tabla-cantidad th:last-child {
     border-top-right-radius: 10px;
 }
 
-/* 3. Esquina Inferior Izquierda */
+/* Esquina Inferior Izquierda */
 .tabla-cantidad tbody tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
 }
 
-/* 4. Esquina Inferior Derecha */
+/* Esquina Inferior Derecha */
 .tabla-cantidad tbody tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
 
-/*Estilo de scrollbar*/
+/* Estilo de scrollbar */
 .tabla-wraper::-webkit-scrollbar {
     width: 6px; /* Un poco más ancha para ser clicable */
 }
 
 .tabla-wraper::-webkit-scrollbar-track {
-    background: transparent; /* O var(--color-principal) */
+    background: transparent; 
 }
 
 .tabla-wraper::-webkit-scrollbar-thumb {
@@ -120,5 +121,5 @@
 }
 
 .tabla-wraper::-webkit-scrollbar-thumb:hover {
-    background: #009879; /* Color verde al pasar el mouse por la barra */
+    background: #009879; /* Al pasar el mouse por la barra */
 }

@@ -7,17 +7,20 @@ import '../../css/ventanas.css';
 
 
 const VentanaVentas = () => {
-    //Definimos la funcion que importamos.
+    /*Importamos el contexto en esta variable.*/
     const {ventasGlobales, vaciarVentas} = useVentas();
 
+    /*Evita que la aplicación se rompa, si no hay contexto o tarda mucho en cargar, sale un mensaje de carga de datos. */
     if (!ventasGlobales) {
         return <div>Cargando datos de ventas...</div>;
     }
+
     //Hay que sacar del contexto las variables que queremos.
     const {conteoProductos, totalVentas, totalImpuestos} = ventasGlobales;
     //Separo del total de ventas el subtotal sin impuesto.
     const venta = totalVentas - totalImpuestos;
 
+    /*Pintamos la composición y le pasamos los parámetros a los hijos. */
     return(
         <div className='contenedor-principal'>
             <div>

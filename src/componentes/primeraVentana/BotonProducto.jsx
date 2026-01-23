@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/botonProducto.css'; 
 
+/*Dibuja el boton/tarjeta de los productos, con su imagen su nombre y su precio. */
 const BotonProducto = ({ producto, alSeleccionar }) => {
   return (
     <button className="boton-producto" onClick={() => alSeleccionar(producto)}>
